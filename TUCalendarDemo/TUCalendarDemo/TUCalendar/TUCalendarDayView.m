@@ -91,7 +91,7 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     
     CGFloat sizeCircle = MIN(self.width, self.height);
     
-    sizeCircle = roundf(sizeCircle);
+    sizeCircle = roundf(sizeCircle) - 6.0f;
     
     circleView.frame = CGRectMake(0, 0, sizeCircle, sizeCircle);
     circleView.center = CGPointMake(self.width / 2.0f, self.height / 2.0f);

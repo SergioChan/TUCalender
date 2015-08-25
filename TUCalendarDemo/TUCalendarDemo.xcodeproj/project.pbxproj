@@ -27,6 +27,7 @@
 		22E07DBA1B8C473C00630F70 /* TUCalendarWeekTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DB91B8C473C00630F70 /* TUCalendarWeekTitleView.m */; };
 		22E07DC51B8CB60E00630F70 /* backward.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E07DC31B8CB60E00630F70 /* backward.png */; };
 		22E07DC61B8CB60E00630F70 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E07DC41B8CB60E00630F70 /* forward.png */; };
+		22E07DC91B8CBD2B00630F70 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DC81B8CBD2B00630F70 /* UINavigationBar+Awesome.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		22E07DC21B8C76ED00630F70 /* TUCalendarHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUCalendarHeader.h; sourceTree = "<group>"; };
 		22E07DC31B8CB60E00630F70 /* backward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backward.png; sourceTree = "<group>"; };
 		22E07DC41B8CB60E00630F70 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
+		22E07DC71B8CBD2B00630F70 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		22E07DC81B8CBD2B00630F70 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 		22E07D6F1B8C447500630F70 /* TUCalendarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				22E07DC71B8CBD2B00630F70 /* UINavigationBar+Awesome.h */,
+				22E07DC81B8CBD2B00630F70 /* UINavigationBar+Awesome.m */,
 				22E07D961B8C447D00630F70 /* TUCalendar */,
 				22E07D741B8C447500630F70 /* AppDelegate.h */,
 				22E07D751B8C447500630F70 /* AppDelegate.m */,
@@ -296,6 +301,7 @@
 				22E07D9F1B8C45B700630F70 /* TUCalendarHeaderView.m in Sources */,
 				22E07DBA1B8C473C00630F70 /* TUCalendarWeekTitleView.m in Sources */,
 				22E07DB11B8C46CD00630F70 /* TUCalendarWeekView.m in Sources */,
+				22E07DC91B8CBD2B00630F70 /* UINavigationBar+Awesome.m in Sources */,
 				22E07D791B8C447500630F70 /* ViewController.m in Sources */,
 				22E07DAE1B8C46B500630F70 /* TUCalendarCircleView.m in Sources */,
 				22E07D991B8C44D100630F70 /* TUCalendarView.m in Sources */,

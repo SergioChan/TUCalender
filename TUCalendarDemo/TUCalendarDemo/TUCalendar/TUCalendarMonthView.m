@@ -80,8 +80,8 @@
     weeksToDisplay = (CGFloat)(WEEKS_TO_DISPLAY + 1); // + 1 for weekDays
     
     CGFloat y = 0;
-    CGFloat width = self.frame.size.width;
-    CGFloat height = self.frame.size.height / weeksToDisplay;
+    CGFloat width = self.width;
+    CGFloat height = self.height / weeksToDisplay;
     
     for(int i = 0; i < self.subviews.count; ++i){
         UIView *view = self.subviews[i];

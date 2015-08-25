@@ -79,10 +79,10 @@
 
 - (void)layoutSubviews
 {
-    monthLabel.frame = CGRectMake(100.0f, self.height - 34.0f, self.width - 200.0f , 22.0f);
-    yearLabel.frame = CGRectMake(100.0f, self.height - 34.0f + 22.0f, self.width - 200.0f, 12.0f);
-    prevButton.frame = CGRectMake(30.0f, monthLabel.top, 16.0f, 25.0f);
-    nextButton.frame = CGRectMake(self.width - 46.0f,  monthLabel.top, 16.0f, 25.0f);
+    monthLabel.frame = CGRectMake(100.0f, self.height - 39.0f, self.width - 200.0f , 22.0f);
+    yearLabel.frame = CGRectMake(100.0f, self.height - 39.0f + 22.0f, self.width - 200.0f, 12.0f);
+    prevButton.frame = CGRectMake(30.0f, monthLabel.top + 5.0f, 12.0f, 19.0f);
+    nextButton.frame = CGRectMake(self.width - 42.0f,  monthLabel.top + 5.0f, 12.0f, 19.0f);
 }
 
 - (void)prevPage:(id)sender

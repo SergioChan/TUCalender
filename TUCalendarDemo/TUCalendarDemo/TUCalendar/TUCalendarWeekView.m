@@ -59,8 +59,8 @@
 - (void)layoutSubviews
 {
     CGFloat x = 0;
-    CGFloat width = self.frame.size.width / 7.;
-    CGFloat height = self.frame.size.height;
+    CGFloat width = self.width / 7.;
+    CGFloat height = self.height;
     
     for(UIView *view in self.subviews){
         view.frame = CGRectMake(x, 0, width, height);

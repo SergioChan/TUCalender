@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "TUCalendarHeader.h"
+#import "UINavigationBar+Awesome.h"
 
 @interface ViewController ()
 {
@@ -22,31 +24,6 @@
     
     self.calendar = [TUCalendarView new];
     self.calendar.defaultCalendar.firstWeekday = 2;
-    // All modifications on calendarAppearance have to be done before setMenuMonthsView and setContentView
-    // Or you will have to call reloadAppearance
-    
-        // Customize the text for each month
-//        self.calendar.calendarAppearance.monthBlock = ^NSString *(NSDate *date, JTCalendar *jt_calendar){
-//            NSCalendar *calendar = jt_calendar.calendarAppearance.calendar;
-//            NSDateComponents *comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth fromDate:date];
-//            NSInteger currentMonthIndex = comps.month;
-//            
-//            static NSDateFormatter *dateFormatter;
-//            if(!dateFormatter){
-//                dateFormatter = [NSDateFormatter new];
-//                dateFormatter.timeZone = jt_calendar.calendarAppearance.calendar.timeZone;
-//            }
-//            
-//            while(currentMonthIndex <= 0){
-//                currentMonthIndex += 12;
-//            }
-//            
-//            NSString *monthText = [[dateFormatter standaloneMonthSymbols][currentMonthIndex - 1] capitalizedString];
-//            
-//            return [NSString stringWithFormat:@"%ld\n%@", comps.year, monthText];
-//        };
-    
-    
     [self.calendar setHeaderView:self.TUcalendarHeaderView];
     [self.calendar setContentView:self.TUcalendarContentView];
     [self.calendar setDataSource:self];
@@ -64,6 +41,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    [self.navigationController.navigationBar lt_setBackgroundColor:GlobalGrayColor];
 }
 
 #pragma mark - TUCalendarDataSource
@@ -89,12 +73,10 @@
 
 - (void)calendarDidLoadPreviousPage
 {
-    NSLog(@"Previous page loaded");
 }
 
 - (void)calendarDidLoadNextPage
 {
-    NSLog(@"Next page loaded");
 }
 
 #pragma mark - Fake data
@@ -115,10 +97,9 @@
     eventsByDate = [NSMutableDictionary new];
     
     for(int i = 0; i < 30; ++i){
-        // Generate 30 random dates between now and 60 days later
+
         NSDate *randomDate = [NSDate dateWithTimeInterval:(rand() % (3600 * 24 * 60)) sinceDate:[NSDate date]];
         
-        // Use the date as key for eventsByDate
         NSString *key = [[self dateFormatter] stringFromDate:randomDate];
         
         if(!eventsByDate[key]){

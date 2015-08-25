@@ -73,8 +73,8 @@
     self.contentOffset = CGPointMake(self.contentOffset.x, 0); // Prevent bug when contentOffset.y is negative
     
     CGFloat x = 0;
-    CGFloat width = self.frame.size.width;
-    CGFloat height = self.frame.size.height;
+    CGFloat width = self.width;
+    CGFloat height = self.height;
     
     for(UIView *view in monthsViews){
         view.frame = CGRectMake(x, 0, width, height);

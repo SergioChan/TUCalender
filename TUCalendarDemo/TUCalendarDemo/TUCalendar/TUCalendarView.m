@@ -8,8 +8,8 @@
 
 #import "TUCalendarView.h"
 
-@interface TUCalendarView(){
-}
+@interface TUCalendarView()
+
 @end
 
 @implementation TUCalendarView
@@ -52,12 +52,12 @@
     [self->_contentView setDelegate:nil];
 }
 
-- (void)setMenuMonthsView:(TUCalendarHeaderView *)menuMonthsView
+- (void)setHeaderView:(TUCalendarHeaderView *)headerView
 {
     [self->_headerView setDelegate:nil];
     [self->_headerView setCalendar:nil];
     
-    self->_headerView = menuMonthsView;
+    self->_headerView = headerView;
     [self->_headerView setCalendar:self];
     
     [self.headerView setCurrentDate:self.currentDate];
