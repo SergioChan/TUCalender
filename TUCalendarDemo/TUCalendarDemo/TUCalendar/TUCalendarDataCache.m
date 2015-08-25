@@ -7,15 +7,58 @@
 //
 
 #import "TUCalendarDataCache.h"
+#import "TUCalendarView.h"
+
+@interface TUCalendarDataCache(){
+    NSMutableDictionary *events;
+    NSDateFormatter *dateFormatter;
+};
+@end
 
 @implementation TUCalendarDataCache
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)init
+{
+    self = [super init];
+    if(!self){
+        return nil;
+    }
+    
+    dateFormatter = [NSDateFormatter new];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    events = [NSMutableDictionary new];
+    
+    return self;
 }
-*/
+
+- (void)reloadData
+{
+    [events removeAllObjects];
+}
+
+- (BOOL)haveCheckedin:(NSDate *)date
+{
+    if(!self.calendar.dataSource){
+        return NO;
+    }
+    
+    if(!self.calendar.useCacheSystem){
+        return [self.calendar.dataSource calendarHaveEvent:self.calendar date:date];
+    }
+    
+    BOOL haveEvent;
+    NSString *key = [dateFormatter stringFromDate:date];
+    
+    if(events[key] != nil){
+        haveEvent = [events[key] boolValue];
+    }
+    else{
+        haveEvent = [self.calendar.dataSource calendarHaveEvent:self.calendar date:date];
+        events[key] = [NSNumber numberWithBool:haveEvent];
+    }
+    
+    return haveEvent;
+}
+
 
 @end

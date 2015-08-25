@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TUCalendarDataCache : UIView
+@class TUCalendarView;
+
+@interface TUCalendarDataCache : NSObject
+
+@property (weak, nonatomic) TUCalendarView *calendar;
+
+- (void)reloadData;
+- (BOOL)haveCheckedin:(NSDate *)date;
 
 @end

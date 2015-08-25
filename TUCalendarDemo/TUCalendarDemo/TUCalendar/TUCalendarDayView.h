@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TUCalendarView.h"
 
 @interface TUCalendarDayView : UIView
+
+@property (weak, nonatomic) TUCalendarView *calendar;
+
+@property (strong, nonatomic) NSDate *date;
+@property (assign, nonatomic) BOOL isOtherMonth;
+
+- (void)reloadData;
 
 @end
