@@ -73,6 +73,7 @@
 		22E07DB61B8C472800630F70 /* TUCalendarMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarMonthView.m; path = TUCalendar/TUCalendarMonthView.m; sourceTree = "<group>"; };
 		22E07DB81B8C473C00630F70 /* TUCalendarWeekTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarWeekTitleView.h; path = TUCalendar/TUCalendarWeekTitleView.h; sourceTree = "<group>"; };
 		22E07DB91B8C473C00630F70 /* TUCalendarWeekTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarWeekTitleView.m; path = TUCalendar/TUCalendarWeekTitleView.m; sourceTree = "<group>"; };
+		22E07DC21B8C76ED00630F70 /* TUCalendarHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUCalendarHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +179,7 @@
 				22E07DB61B8C472800630F70 /* TUCalendarMonthView.m */,
 				22E07DB81B8C473C00630F70 /* TUCalendarWeekTitleView.h */,
 				22E07DB91B8C473C00630F70 /* TUCalendarWeekTitleView.m */,
+				22E07DC21B8C76ED00630F70 /* TUCalendarHeader.h */,
 			);
 			name = TUCalendar;
 			sourceTree = "<group>";

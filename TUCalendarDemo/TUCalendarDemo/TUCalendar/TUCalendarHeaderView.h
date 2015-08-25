@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TUCalendarHeaderView : UIView
+@class TUCalendarView;
+
+@interface TUCalendarHeaderView : UIScrollView
+
+@property (weak, nonatomic) TUCalendarView *calendar;
+
+@property (nonatomic, copy) void (^transferButtonPressed)(NSInteger type);
+
+@property (strong, nonatomic) NSDate *currentDate;
+
+- (void)reloadLayout;
 
 @end

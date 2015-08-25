@@ -17,5 +17,6 @@
 @property (assign, nonatomic) BOOL isOtherMonth;
 
 - (void)reloadData;
+- (void)reloadLayout;
 
 @end

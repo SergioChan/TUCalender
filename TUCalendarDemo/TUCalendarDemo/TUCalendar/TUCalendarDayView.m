@@ -14,8 +14,7 @@
     TUCalendarCircleView *circleView;
     UILabel *textLabel;
     TUCalendarCircleView *checkedView;
-    TUCalendarCircleView *todayView;
-    
+    BOOL isWeekend;
     BOOL isSelected;
     int cacheIsToday;
     NSString *cacheCurrentDateText;
@@ -63,16 +62,14 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     textLabel = [UILabel new];
     checkedView = [TUCalendarCircleView new];
     checkedView.hidden = YES;
-    todayView = [TUCalendarCircleView new];
-    todayView.hidden = YES;
     
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTouch)];
         
     self.userInteractionEnabled = YES;
     [self addGestureRecognizer:gesture];
-    [self addSubview:circleView];
     [self addSubview:backgroundView];
     [self addSubview:checkedView];
+    [self addSubview:circleView];
     [self addSubview:textLabel];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didDaySelected:) name:kTUCalendarDaySelected object:nil];
@@ -100,10 +97,6 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     circleView.center = CGPointMake(self.width / 2.0f, self.height / 2.0f);
     circleView.layer.cornerRadius = sizeCircle / 2.0f;
     
-    todayView.frame = CGRectMake(0, 0, sizeCircle, sizeCircle);
-    todayView.center = CGPointMake(self.width / 2.0f, self.height / 2.0f);
-    todayView.layer.cornerRadius = sizeCircle / 2.0f;
-    
     checkedView.frame = CGRectMake(0, 0, sizeCircle, sizeCircle);
     checkedView.center = CGPointMake(self.width / 2.0f, self.height / 2.0f);
     checkedView.layer.cornerRadius = sizeCircle / 2.0f;
@@ -119,6 +112,14 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     }
     
     self->_date = date;
+    
+    NSCalendar *calendar = self.calendar.defaultCalendar;
+    NSDateComponents *comps = [calendar components:NSCalendarUnitWeekday fromDate:date];
+    if(comps.weekday == 1 || comps.weekday == 7)
+    {
+        isWeekend = YES;
+        
+    }
     
     textLabel.text = [dateFormatter stringFromDate:date];
     
@@ -175,48 +176,43 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     isSelected = selected;
     
     circleView.transform = CGAffineTransformIdentity;
-    
     CGAffineTransform tr = CGAffineTransformIdentity;
-    CGFloat opacity = 1.;
+    CGFloat opacity = 1.0f;
     
     if(selected){
-        if(!self.isOtherMonth){
-            circleView.color = [UIColor redColor];
-            textLabel.textColor = [UIColor whiteColor];
-        }
-        else{
-            circleView.color = [UIColor redColor];
-            textLabel.textColor = [UIColor whiteColor];
-        }
+        circleView.color = GlobalPinkColor;
+        textLabel.textColor = GlobalTextSelectedColor;
+        checkedView.color = GlobalDefaultColor;
         
-        circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
+        circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1f, 0.1f);
         tr = CGAffineTransformIdentity;
     }
     else if([self isToday]){
-        if(!self.isOtherMonth){
-            circleView.color = [self.calendarManager.calendarAppearance dayCircleColorToday];
-            textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColorToday];
-        }
-        else{
-            circleView.color = [self.calendarManager.calendarAppearance dayCircleColorTodayOtherMonth];
-            textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColorTodayOtherMonth];
-        }
+        circleView.color = GlobalGrayColor;
+        textLabel.textColor = GlobalTextSelectedColor;
     }
     else{
+        if(isWeekend)
+        {
+            textLabel.textColor = GlobalPinkColor;
+        }
+        else
+        {
+            textLabel.textColor = GlobalTextColor;
+        }
+        checkedView.color = GlobalDefaultColor;
         if(!self.isOtherMonth){
-            textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColor];
-            dotView.color = [self.calendarManager.calendarAppearance dayDotColor];
+            textLabel.alpha = 1.0f;
         }
         else{
-            textLabel.textColor = [self.calendarManager.calendarAppearance dayTextColorOtherMonth];
-            dotView.color = [self.calendarManager.calendarAppearance dayDotColorOtherMonth];
+            textLabel.alpha = 0.5f;
         }
         
-        opacity = 0.;
+        opacity = 0.0f;
     }
     
     if(animated){
-        [UIView animateWithDuration:.3 animations:^{
+        [UIView animateWithDuration:0.3f animations:^{
             circleView.layer.opacity = opacity;
             circleView.transform = tr;
         }];
@@ -235,9 +231,16 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
 
 - (void)reloadData
 {
-    dotView.hidden = ![self.calendarManager.dataCache haveEvent:self.date];
+    if([self isToday])
+    {
+        checkedView.hidden = YES;
+    }
+    else
+    {
+        checkedView.hidden = ![self.calendar.dataCache haveCheckedin:self.date];
+    }
     
-    BOOL selected = [self isSameDate:[self.calendarManager currentDateSelected]];
+    BOOL selected = [self isSameDate:[self.calendar currentDateSelected]];
     [self setSelected:selected animated:NO];
 }
 
@@ -266,7 +269,7 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     static NSDateFormatter *dateFormatter;
     if(!dateFormatter){
         dateFormatter = [NSDateFormatter new];
-        dateFormatter.timeZone = self.calendarManager.calendarAppearance.calendar.timeZone;
+        dateFormatter.timeZone = self.calendar.defaultCalendar.timeZone;
         [dateFormatter setDateFormat:@"dd-MM-yyyy"];
     }
     
@@ -285,18 +288,18 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
 
 - (NSInteger)monthIndexForDate:(NSDate *)date
 {
-    NSCalendar *calendar = self.calendarManager.calendarAppearance.calendar;
+    NSCalendar *calendar = self.calendar.defaultCalendar;
     NSDateComponents *comps = [calendar components:NSCalendarUnitMonth fromDate:date];
     return comps.month;
 }
 
-- (void)reloadAppearance
+- (void)reloadLayout
 {
     textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.font = self.calendarManager.calendarAppearance.dayTextFont;
-    backgroundView.backgroundColor = self.calendarManager.calendarAppearance.dayBackgroundColor;
-    backgroundView.layer.borderWidth = self.calendarManager.calendarAppearance.dayBorderWidth;
-    backgroundView.layer.borderColor = self.calendarManager.calendarAppearance.dayBorderColor.CGColor;
+    textLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+    backgroundView.backgroundColor = [UIColor clearColor];
+    backgroundView.layer.borderWidth = 0.0f;
+    backgroundView.layer.borderColor = [UIColor clearColor].CGColor;
     
     [self configureConstraintsForSubviews];
     [self setSelected:isSelected animated:NO];

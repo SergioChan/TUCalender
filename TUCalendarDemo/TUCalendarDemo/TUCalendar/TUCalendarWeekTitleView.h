@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TUCalendarView.h"
 
 @interface TUCalendarWeekTitleView : UIView
+@property (weak, nonatomic) TUCalendarView *calendar;
 
++ (void)beforeReloadLayout;
+- (void)reloadLayout;
 @end

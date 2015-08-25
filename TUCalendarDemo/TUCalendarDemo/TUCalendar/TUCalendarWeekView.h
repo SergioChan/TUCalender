@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TUCalendarView.h"
 
 @interface TUCalendarWeekView : UIView
+
+@property (weak, nonatomic) TUCalendarView *calendar;
+
+@property (assign, nonatomic) NSUInteger currentMonthIndex;
+
+- (void)setBeginningOfWeek:(NSDate *)date;
+- (void)reloadData;
+- (void)reloadLayout;
 
 @end

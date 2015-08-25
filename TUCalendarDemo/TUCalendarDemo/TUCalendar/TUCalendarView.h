@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TUCalendarHeader.h"
 #import "TUCalendarContentView.h"
 #import "TUCalendarHeaderView.h"
 #import "TUCalendarDataCache.h"
@@ -23,7 +24,7 @@
 - (void)calendarDidLoadNextPage;
 @end
 
-@interface TUCalendarView : UIView
+@interface TUCalendarView : NSObject<UIScrollViewDelegate>
 
 @property (weak, nonatomic) TUCalendarHeaderView *headerView;
 @property (weak, nonatomic) TUCalendarContentView *contentView;
