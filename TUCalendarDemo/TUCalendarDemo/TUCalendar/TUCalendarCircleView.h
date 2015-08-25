@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TUCalendarHeader.h"
 
 @interface TUCalendarCircleView : UIView
 

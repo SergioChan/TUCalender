@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TUCalendarView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<TUCalendarDataSource>
 
+@property (weak, nonatomic) IBOutlet TUCalendarHeaderView *TUcalendarHeaderView;
+@property (weak, nonatomic) IBOutlet TUCalendarContentView *TUcalendarContentView;
+
+@property (strong, nonatomic) TUCalendarView *calendar;
 
 @end
 

@@ -77,7 +77,10 @@
     NSCalendar *calendar = self.calendar.defaultCalendar;
     
     for(TUCalendarDayView *view in daysViews){
-        [view setIsOtherMonth:NO];
+        NSDateComponents *comps = [calendar components:NSCalendarUnitMonth fromDate:currentDate];
+        NSInteger monthIndex = comps.month;
+        
+        [view setIsOtherMonth:monthIndex != self.currentMonthIndex];
         [view setDate:currentDate];
         
         NSDateComponents *dayComponent = [NSDateComponents new];
@@ -87,9 +90,9 @@
     }
 }
 
-#pragma mark - JTCalendarManager
+#pragma mark - TUCalendarView
 
-- (void)setCalendarManager:(TUCalendarView *)calendar
+- (void)setCalendar:(TUCalendarView *)calendar
 {
     self->_calendar = calendar;
     for(TUCalendarDayView *view in daysViews){

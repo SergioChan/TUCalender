@@ -44,7 +44,17 @@
 
 - (void)setColor:(UIColor *)color
 {
-    self.color = color;
+    self->_color = color;
+    if([color isEqual:[UIColor clearColor]])
+    {
+        self.layer.borderColor = GlobalPinkColor.CGColor;
+        self.layer.borderWidth = 1.0f;
+    }
+    else
+    {
+        self.layer.borderColor = [UIColor clearColor].CGColor;
+        self.layer.borderWidth = 0.0f;
+    }
     [self setNeedsDisplay];
 }
 

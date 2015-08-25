@@ -81,9 +81,6 @@
     CGFloat x = 0;
     CGFloat width = self.frame.size.width;
     CGFloat height = self.frame.size.height;
-    
-    width = self.frame.size.width;
-    x = (self.frame.size.width - width) / 2.;
 
     for(UIView *view in monthsViews){
         view.frame = CGRectMake(x, 0, width, height);

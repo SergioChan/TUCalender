@@ -25,6 +25,8 @@
 		22E07DB41B8C46DC00630F70 /* TUCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DB31B8C46DC00630F70 /* TUCalendarDayView.m */; };
 		22E07DB71B8C472800630F70 /* TUCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DB61B8C472800630F70 /* TUCalendarMonthView.m */; };
 		22E07DBA1B8C473C00630F70 /* TUCalendarWeekTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DB91B8C473C00630F70 /* TUCalendarWeekTitleView.m */; };
+		22E07DC51B8CB60E00630F70 /* backward.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E07DC31B8CB60E00630F70 /* backward.png */; };
+		22E07DC61B8CB60E00630F70 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E07DC41B8CB60E00630F70 /* forward.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		22E07DB81B8C473C00630F70 /* TUCalendarWeekTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarWeekTitleView.h; path = TUCalendar/TUCalendarWeekTitleView.h; sourceTree = "<group>"; };
 		22E07DB91B8C473C00630F70 /* TUCalendarWeekTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarWeekTitleView.m; path = TUCalendar/TUCalendarWeekTitleView.m; sourceTree = "<group>"; };
 		22E07DC21B8C76ED00630F70 /* TUCalendarHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUCalendarHeader.h; sourceTree = "<group>"; };
+		22E07DC31B8CB60E00630F70 /* backward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backward.png; sourceTree = "<group>"; };
+		22E07DC41B8CB60E00630F70 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 		22E07D701B8C447500630F70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22E07DC31B8CB60E00630F70 /* backward.png */,
+				22E07DC41B8CB60E00630F70 /* forward.png */,
 				22E07D711B8C447500630F70 /* Info.plist */,
 				22E07D721B8C447500630F70 /* main.m */,
 			);
@@ -266,7 +272,9 @@
 			files = (
 				22E07D7C1B8C447500630F70 /* Main.storyboard in Resources */,
 				22E07D811B8C447500630F70 /* LaunchScreen.xib in Resources */,
+				22E07DC51B8CB60E00630F70 /* backward.png in Resources */,
 				22E07D7E1B8C447500630F70 /* Images.xcassets in Resources */,
+				22E07DC61B8CB60E00630F70 /* forward.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
