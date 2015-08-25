@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22E07D731B8C447500630F70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07D721B8C447500630F70 /* main.m */; };
+		22E07D761B8C447500630F70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07D751B8C447500630F70 /* AppDelegate.m */; };
+		22E07D791B8C447500630F70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07D781B8C447500630F70 /* ViewController.m */; };
+		22E07D7C1B8C447500630F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E07D7A1B8C447500630F70 /* Main.storyboard */; };
+		22E07D7E1B8C447500630F70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E07D7D1B8C447500630F70 /* Images.xcassets */; };
+		22E07D811B8C447500630F70 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E07D7F1B8C447500630F70 /* LaunchScreen.xib */; };
+		22E07D8D1B8C447500630F70 /* TUCalendarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07D8C1B8C447500630F70 /* TUCalendarDemoTests.m */; };
+		22E07D991B8C44D100630F70 /* TUCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07D981B8C44D100630F70 /* TUCalendarView.m */; };
+		22E07D9C1B8C450600630F70 /* TUCalendarUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07D9B1B8C450600630F70 /* TUCalendarUtil.m */; };
+		22E07D9F1B8C45B700630F70 /* TUCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07D9E1B8C45B700630F70 /* TUCalendarHeaderView.m */; };
+		22E07DA21B8C45D000630F70 /* TUCalendarHeaderItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DA11B8C45D000630F70 /* TUCalendarHeaderItemView.m */; };
+		22E07DA51B8C45E500630F70 /* TUCalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DA41B8C45E500630F70 /* TUCalendarContentView.m */; };
+		22E07DA81B8C464E00630F70 /* TUCalendarDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DA71B8C464E00630F70 /* TUCalendarDataCache.m */; };
+		22E07DAE1B8C46B500630F70 /* TUCalendarCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DAD1B8C46B500630F70 /* TUCalendarCircleView.m */; };
+		22E07DB11B8C46CD00630F70 /* TUCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DB01B8C46CD00630F70 /* TUCalendarWeekView.m */; };
+		22E07DB41B8C46DC00630F70 /* TUCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DB31B8C46DC00630F70 /* TUCalendarDayView.m */; };
+		22E07DB71B8C472800630F70 /* TUCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DB61B8C472800630F70 /* TUCalendarMonthView.m */; };
+		22E07DBA1B8C473C00630F70 /* TUCalendarWeekTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E07DB91B8C473C00630F70 /* TUCalendarWeekTitleView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22E07D871B8C447500630F70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22E07D651B8C447500630F70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E07D6C1B8C447500630F70;
+			remoteInfo = TUCalendarDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22E07D6D1B8C447500630F70 /* TUCalendarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUCalendarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E07D711B8C447500630F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22E07D721B8C447500630F70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22E07D741B8C447500630F70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22E07D751B8C447500630F70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22E07D771B8C447500630F70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		22E07D781B8C447500630F70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		22E07D7B1B8C447500630F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22E07D7D1B8C447500630F70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		22E07D801B8C447500630F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		22E07D861B8C447500630F70 /* TUCalendarDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUCalendarDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E07D8B1B8C447500630F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22E07D8C1B8C447500630F70 /* TUCalendarDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUCalendarDemoTests.m; sourceTree = "<group>"; };
+		22E07D971B8C44D100630F70 /* TUCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarView.h; path = TUCalendar/TUCalendarView.h; sourceTree = "<group>"; };
+		22E07D981B8C44D100630F70 /* TUCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarView.m; path = TUCalendar/TUCalendarView.m; sourceTree = "<group>"; };
+		22E07D9A1B8C450600630F70 /* TUCalendarUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarUtil.h; path = TUCalendar/TUCalendarUtil.h; sourceTree = "<group>"; };
+		22E07D9B1B8C450600630F70 /* TUCalendarUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarUtil.m; path = TUCalendar/TUCalendarUtil.m; sourceTree = "<group>"; };
+		22E07D9D1B8C45B700630F70 /* TUCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarHeaderView.h; path = TUCalendar/TUCalendarHeaderView.h; sourceTree = "<group>"; };
+		22E07D9E1B8C45B700630F70 /* TUCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarHeaderView.m; path = TUCalendar/TUCalendarHeaderView.m; sourceTree = "<group>"; };
+		22E07DA01B8C45D000630F70 /* TUCalendarHeaderItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarHeaderItemView.h; path = TUCalendar/TUCalendarHeaderItemView.h; sourceTree = "<group>"; };
+		22E07DA11B8C45D000630F70 /* TUCalendarHeaderItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarHeaderItemView.m; path = TUCalendar/TUCalendarHeaderItemView.m; sourceTree = "<group>"; };
+		22E07DA31B8C45E500630F70 /* TUCalendarContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarContentView.h; path = TUCalendar/TUCalendarContentView.h; sourceTree = "<group>"; };
+		22E07DA41B8C45E500630F70 /* TUCalendarContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarContentView.m; path = TUCalendar/TUCalendarContentView.m; sourceTree = "<group>"; };
+		22E07DA61B8C464E00630F70 /* TUCalendarDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarDataCache.h; path = TUCalendar/TUCalendarDataCache.h; sourceTree = "<group>"; };
+		22E07DA71B8C464E00630F70 /* TUCalendarDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarDataCache.m; path = TUCalendar/TUCalendarDataCache.m; sourceTree = "<group>"; };
+		22E07DAC1B8C46B500630F70 /* TUCalendarCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarCircleView.h; path = TUCalendar/TUCalendarCircleView.h; sourceTree = "<group>"; };
+		22E07DAD1B8C46B500630F70 /* TUCalendarCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarCircleView.m; path = TUCalendar/TUCalendarCircleView.m; sourceTree = "<group>"; };
+		22E07DAF1B8C46CD00630F70 /* TUCalendarWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarWeekView.h; path = TUCalendar/TUCalendarWeekView.h; sourceTree = "<group>"; };
+		22E07DB01B8C46CD00630F70 /* TUCalendarWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarWeekView.m; path = TUCalendar/TUCalendarWeekView.m; sourceTree = "<group>"; };
+		22E07DB21B8C46DC00630F70 /* TUCalendarDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarDayView.h; path = TUCalendar/TUCalendarDayView.h; sourceTree = "<group>"; };
+		22E07DB31B8C46DC00630F70 /* TUCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarDayView.m; path = TUCalendar/TUCalendarDayView.m; sourceTree = "<group>"; };
+		22E07DB51B8C472800630F70 /* TUCalendarMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarMonthView.h; path = TUCalendar/TUCalendarMonthView.h; sourceTree = "<group>"; };
+		22E07DB61B8C472800630F70 /* TUCalendarMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarMonthView.m; path = TUCalendar/TUCalendarMonthView.m; sourceTree = "<group>"; };
+		22E07DB81B8C473C00630F70 /* TUCalendarWeekTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TUCalendarWeekTitleView.h; path = TUCalendar/TUCalendarWeekTitleView.h; sourceTree = "<group>"; };
+		22E07DB91B8C473C00630F70 /* TUCalendarWeekTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TUCalendarWeekTitleView.m; path = TUCalendar/TUCalendarWeekTitleView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22E07D6A1B8C447500630F70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E07D831B8C447500630F70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22E07D641B8C447500630F70 = {
+			isa = PBXGroup;
+			children = (
+				22E07D6F1B8C447500630F70 /* TUCalendarDemo */,
+				22E07D891B8C447500630F70 /* TUCalendarDemoTests */,
+				22E07D6E1B8C447500630F70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22E07D6E1B8C447500630F70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22E07D6D1B8C447500630F70 /* TUCalendarDemo.app */,
+				22E07D861B8C447500630F70 /* TUCalendarDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22E07D6F1B8C447500630F70 /* TUCalendarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				22E07D961B8C447D00630F70 /* TUCalendar */,
+				22E07D741B8C447500630F70 /* AppDelegate.h */,
+				22E07D751B8C447500630F70 /* AppDelegate.m */,
+				22E07D771B8C447500630F70 /* ViewController.h */,
+				22E07D781B8C447500630F70 /* ViewController.m */,
+				22E07D7A1B8C447500630F70 /* Main.storyboard */,
+				22E07D7D1B8C447500630F70 /* Images.xcassets */,
+				22E07D7F1B8C447500630F70 /* LaunchScreen.xib */,
+				22E07D701B8C447500630F70 /* Supporting Files */,
+			);
+			path = TUCalendarDemo;
+			sourceTree = "<group>";
+		};
+		22E07D701B8C447500630F70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22E07D711B8C447500630F70 /* Info.plist */,
+				22E07D721B8C447500630F70 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22E07D891B8C447500630F70 /* TUCalendarDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				22E07D8C1B8C447500630F70 /* TUCalendarDemoTests.m */,
+				22E07D8A1B8C447500630F70 /* Supporting Files */,
+			);
+			path = TUCalendarDemoTests;
+			sourceTree = "<group>";
+		};
+		22E07D8A1B8C447500630F70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22E07D8B1B8C447500630F70 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22E07D961B8C447D00630F70 /* TUCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				22E07DAC1B8C46B500630F70 /* TUCalendarCircleView.h */,
+				22E07DAD1B8C46B500630F70 /* TUCalendarCircleView.m */,
+				22E07D971B8C44D100630F70 /* TUCalendarView.h */,
+				22E07D981B8C44D100630F70 /* TUCalendarView.m */,
+				22E07D9A1B8C450600630F70 /* TUCalendarUtil.h */,
+				22E07D9B1B8C450600630F70 /* TUCalendarUtil.m */,
+				22E07D9D1B8C45B700630F70 /* TUCalendarHeaderView.h */,
+				22E07D9E1B8C45B700630F70 /* TUCalendarHeaderView.m */,
+				22E07DA01B8C45D000630F70 /* TUCalendarHeaderItemView.h */,
+				22E07DA11B8C45D000630F70 /* TUCalendarHeaderItemView.m */,
+				22E07DA31B8C45E500630F70 /* TUCalendarContentView.h */,
+				22E07DA41B8C45E500630F70 /* TUCalendarContentView.m */,
+				22E07DA61B8C464E00630F70 /* TUCalendarDataCache.h */,
+				22E07DA71B8C464E00630F70 /* TUCalendarDataCache.m */,
+				22E07DAF1B8C46CD00630F70 /* TUCalendarWeekView.h */,
+				22E07DB01B8C46CD00630F70 /* TUCalendarWeekView.m */,
+				22E07DB21B8C46DC00630F70 /* TUCalendarDayView.h */,
+				22E07DB31B8C46DC00630F70 /* TUCalendarDayView.m */,
+				22E07DB51B8C472800630F70 /* TUCalendarMonthView.h */,
+				22E07DB61B8C472800630F70 /* TUCalendarMonthView.m */,
+				22E07DB81B8C473C00630F70 /* TUCalendarWeekTitleView.h */,
+				22E07DB91B8C473C00630F70 /* TUCalendarWeekTitleView.m */,
+			);
+			name = TUCalendar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22E07D6C1B8C447500630F70 /* TUCalendarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E07D901B8C447500630F70 /* Build configuration list for PBXNativeTarget "TUCalendarDemo" */;
+			buildPhases = (
+				22E07D691B8C447500630F70 /* Sources */,
+				22E07D6A1B8C447500630F70 /* Frameworks */,
+				22E07D6B1B8C447500630F70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TUCalendarDemo;
+			productName = TUCalendarDemo;
+			productReference = 22E07D6D1B8C447500630F70 /* TUCalendarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22E07D851B8C447500630F70 /* TUCalendarDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E07D931B8C447500630F70 /* Build configuration list for PBXNativeTarget "TUCalendarDemoTests" */;
+			buildPhases = (
+				22E07D821B8C447500630F70 /* Sources */,
+				22E07D831B8C447500630F70 /* Frameworks */,
+				22E07D841B8C447500630F70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22E07D881B8C447500630F70 /* PBXTargetDependency */,
+			);
+			name = TUCalendarDemoTests;
+			productName = TUCalendarDemoTests;
+			productReference = 22E07D861B8C447500630F70 /* TUCalendarDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22E07D651B8C447500630F70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "chen Yuheng";
+				TargetAttributes = {
+					22E07D6C1B8C447500630F70 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					22E07D851B8C447500630F70 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 22E07D6C1B8C447500630F70;
+					};
+				};
+			};
+			buildConfigurationList = 22E07D681B8C447500630F70 /* Build configuration list for PBXProject "TUCalendarDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22E07D641B8C447500630F70;
+			productRefGroup = 22E07D6E1B8C447500630F70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22E07D6C1B8C447500630F70 /* TUCalendarDemo */,
+				22E07D851B8C447500630F70 /* TUCalendarDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22E07D6B1B8C447500630F70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E07D7C1B8C447500630F70 /* Main.storyboard in Resources */,
+				22E07D811B8C447500630F70 /* LaunchScreen.xib in Resources */,
+				22E07D7E1B8C447500630F70 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E07D841B8C447500630F70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22E07D691B8C447500630F70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E07DA81B8C464E00630F70 /* TUCalendarDataCache.m in Sources */,
+				22E07D9F1B8C45B700630F70 /* TUCalendarHeaderView.m in Sources */,
+				22E07DBA1B8C473C00630F70 /* TUCalendarWeekTitleView.m in Sources */,
+				22E07DB11B8C46CD00630F70 /* TUCalendarWeekView.m in Sources */,
+				22E07D791B8C447500630F70 /* ViewController.m in Sources */,
+				22E07DAE1B8C46B500630F70 /* TUCalendarCircleView.m in Sources */,
+				22E07D991B8C44D100630F70 /* TUCalendarView.m in Sources */,
+				22E07DA51B8C45E500630F70 /* TUCalendarContentView.m in Sources */,
+				22E07DB71B8C472800630F70 /* TUCalendarMonthView.m in Sources */,
+				22E07D9C1B8C450600630F70 /* TUCalendarUtil.m in Sources */,
+				22E07D761B8C447500630F70 /* AppDelegate.m in Sources */,
+				22E07D731B8C447500630F70 /* main.m in Sources */,
+				22E07DB41B8C46DC00630F70 /* TUCalendarDayView.m in Sources */,
+				22E07DA21B8C45D000630F70 /* TUCalendarHeaderItemView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E07D821B8C447500630F70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E07D8D1B8C447500630F70 /* TUCalendarDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22E07D881B8C447500630F70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22E07D6C1B8C447500630F70 /* TUCalendarDemo */;
+			targetProxy = 22E07D871B8C447500630F70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22E07D7A1B8C447500630F70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22E07D7B1B8C447500630F70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22E07D7F1B8C447500630F70 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22E07D801B8C447500630F70 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22E07D8E1B8C447500630F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22E07D8F1B8C447500630F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22E07D911B8C447500630F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TUCalendarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22E07D921B8C447500630F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TUCalendarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		22E07D941B8C447500630F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TUCalendarDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TUCalendarDemo.app/TUCalendarDemo";
+			};
+			name = Debug;
+		};
+		22E07D951B8C447500630F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TUCalendarDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TUCalendarDemo.app/TUCalendarDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22E07D681B8C447500630F70 /* Build configuration list for PBXProject "TUCalendarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E07D8E1B8C447500630F70 /* Debug */,
+				22E07D8F1B8C447500630F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22E07D901B8C447500630F70 /* Build configuration list for PBXNativeTarget "TUCalendarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E07D911B8C447500630F70 /* Debug */,
+				22E07D921B8C447500630F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22E07D931B8C447500630F70 /* Build configuration list for PBXNativeTarget "TUCalendarDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E07D941B8C447500630F70 /* Debug */,
+				22E07D951B8C447500630F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22E07D651B8C447500630F70 /* Project object */;
+}
