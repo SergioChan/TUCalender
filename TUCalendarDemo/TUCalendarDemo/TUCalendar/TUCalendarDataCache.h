@@ -11,9 +11,7 @@
 @class TUCalendarView;
 
 @interface TUCalendarDataCache : NSObject
-
 @property (weak, nonatomic) TUCalendarView *calendar;
-
 - (void)reloadData;
 - (BOOL)haveCheckedin:(NSDate *)date;
 

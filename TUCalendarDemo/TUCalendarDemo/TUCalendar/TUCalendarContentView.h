@@ -12,9 +12,7 @@
 
 @interface TUCalendarContentView : UIScrollView
 @property (weak, nonatomic) TUCalendarView *calendar;
-
 @property (strong, nonatomic) NSDate *currentDate;
-
 - (void)reloadData;
 - (void)reloadLayout;
 @end

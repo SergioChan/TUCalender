@@ -10,13 +10,9 @@
 #import "TUCalendarView.h"
 
 @interface TUCalendarHeaderItemView : UIView
-
 @property (weak, nonatomic) TUCalendarView *calendar;
-
 @property (nonatomic, copy) void (^transferButtonPressed)(NSInteger type);
-
 - (void)setCurrentDate:(NSDate *)currentDate;
-
 - (void)reloadLayout;
 
 @end

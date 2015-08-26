@@ -79,10 +79,10 @@
 
 - (void)layoutSubviews
 {
-    monthLabel.frame = CGRectMake(100.0f, self.height - 39.0f, self.width - 200.0f , 22.0f);
-    yearLabel.frame = CGRectMake(100.0f, self.height - 39.0f + 22.0f, self.width - 200.0f, 12.0f);
-    prevButton.frame = CGRectMake(30.0f, monthLabel.top + 5.0f, 12.0f, 19.0f);
-    nextButton.frame = CGRectMake(self.width - 42.0f,  monthLabel.top + 5.0f, 12.0f, 19.0f);
+    monthLabel.frame = CGRectMake(HEADER_MONTH_LABEL_LEFT, self.height - HEADER_MONTH_LABEL_HEIGHT - 5.0f - HEADER_YEAR_LABEL_HEIGHT, self.width - HEADER_MONTH_LABEL_LEFT * 2.0f , HEADER_MONTH_LABEL_HEIGHT);
+    yearLabel.frame = CGRectMake(HEADER_MONTH_LABEL_LEFT, self.height - 5.0f - HEADER_YEAR_LABEL_HEIGHT, self.width - HEADER_MONTH_LABEL_LEFT * 2.0f, HEADER_YEAR_LABEL_HEIGHT);
+    prevButton.frame = CGRectMake(HEADER_ARROW_LABEL_LEFT, monthLabel.top + 5.0f, 12.0f, 19.0f);
+    nextButton.frame = CGRectMake(self.width - HEADER_ARROW_LABEL_LEFT - 12.0f,  monthLabel.top + 5.0f, 12.0f, 19.0f);
 }
 
 - (void)prevPage:(id)sender
@@ -108,8 +108,8 @@
     monthLabel.textColor = [UIColor blackColor];
     monthLabel.font = [UIFont boldSystemFontOfSize:22.0f];
     
-    [prevButton setBackgroundImage:[UIImage imageNamed:@"backward" inBundle:[NSBundle mainBundle] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    [nextButton setBackgroundImage:[UIImage imageNamed:@"forward" inBundle:[NSBundle mainBundle] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [prevButton setBackgroundImage:[UIImage imageNamed:@"backward"] forState:UIControlStateNormal];
+    [nextButton setBackgroundImage:[UIImage imageNamed:@"forward"] forState:UIControlStateNormal];
 }
 
 @end

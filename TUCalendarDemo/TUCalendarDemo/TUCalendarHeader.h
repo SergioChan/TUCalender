@@ -16,4 +16,10 @@
 #define GlobalDefaultColor [UIColor clearColor]
 
 #define NUMBER_PAGES_LOADED 3
+
+#define HEADER_MONTH_LABEL_LEFT 100.0f
+#define HEADER_MONTH_LABEL_HEIGHT 22.0f
+#define HEADER_YEAR_LABEL_HEIGHT 12.0f
+
+#define HEADER_ARROW_LABEL_LEFT 30.0f
 #endif

@@ -34,7 +34,6 @@
 @property (strong, nonatomic) NSDate *currentDateSelected;
 @property (strong, nonatomic) NSString *dayFormat;
 
-@property (assign, nonatomic) BOOL useCacheSystem;
 @property (strong, nonatomic, readonly) TUCalendarDataCache *dataCache;
 
 - (NSCalendar *)defaultCalendar;

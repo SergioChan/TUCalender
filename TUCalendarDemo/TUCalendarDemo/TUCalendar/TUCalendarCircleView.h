@@ -10,6 +10,5 @@
 #import "TUCalendarHeader.h"
 
 @interface TUCalendarCircleView : UIView
-
 @property (nonatomic, strong) UIColor *color;
 @end

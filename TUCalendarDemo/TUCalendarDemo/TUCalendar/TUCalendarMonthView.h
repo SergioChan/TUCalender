@@ -11,7 +11,6 @@
 
 @interface TUCalendarMonthView : UIView
 @property (weak, nonatomic) TUCalendarView *calendar;
-
 - (void)setBeginningOfMonth:(NSDate *)date;
 - (void)reloadData;
 - (void)reloadLayout;
