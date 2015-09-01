@@ -42,22 +42,22 @@
         return NO;
     }
     
-    if(!self.calendar.useCacheSystem){
-        return [self.calendar.dataSource calendarHaveEvent:self.calendar date:date];
-    }
     
-    BOOL haveEvent;
-    NSString *key = [dateFormatter stringFromDate:date];
+    return [self.calendar.dataSource calendarHaveEvent:self.calendar date:date];
     
-    if(events[key] != nil){
-        haveEvent = [events[key] boolValue];
-    }
-    else{
-        haveEvent = [self.calendar.dataSource calendarHaveEvent:self.calendar date:date];
-        events[key] = [NSNumber numberWithBool:haveEvent];
-    }
     
-    return haveEvent;
+//    BOOL haveEvent;
+//    NSString *key = [dateFormatter stringFromDate:date];
+//    
+//    if(events[key] != nil){
+//        haveEvent = [events[key] boolValue];
+//    }
+//    else{
+//        haveEvent = [self.calendar.dataSource calendarHaveEvent:self.calendar date:date];
+//        events[key] = [NSNumber numberWithBool:haveEvent];
+//    }
+//    
+//    return haveEvent;
 }
 
 

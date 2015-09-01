@@ -18,7 +18,7 @@
 @protocol TUCalendarDataSource <NSObject>
 
 - (BOOL)calendarHaveEvent:(TUCalendarView *)calendar date:(NSDate *)date;
-- (void)calendarDidDateSelected:(TUCalendarView *)calendar date:(NSDate *)date;
+- (void)calendarDidDateSelected:(TUCalendarView *)calendar date:(NSString *)dateString;
 @optional
 - (void)calendarDidLoadPreviousPage;
 - (void)calendarDidLoadNextPage;
@@ -43,5 +43,5 @@
 - (void)loadNextPage;
 
 - (void)repositionViews;
-
+- (void)reloadLayout;
 @end

@@ -42,7 +42,7 @@ static NSArray *cacheDaysOfWeeks;
         UILabel *view = [UILabel new];
         
         view.font = [UIFont systemFontOfSize:14.0f];
-        view.textColor = [UIColor colorWithRed:68.0f/255.0f green:68.0f/255.0f blue:68.0f/255.0f alpha:1.0f];
+        view.textColor = TUCalendar_GlobalTextColor;
         
         view.textAlignment = NSTextAlignmentCenter;
         view.text = day;
@@ -105,11 +105,11 @@ static NSArray *cacheDaysOfWeeks;
         view.font = [UIFont systemFontOfSize:14.0f];
         if(i >= 5)
         {
-            view.textColor = [UIColor colorWithRed:255.0f/255.0f green:107.0f/255.0f blue:142.0f/255.0f alpha:1.0f];
+            view.textColor = TUCalendar_GlobalPinkColor;
         }
         else
         {
-            view.textColor = [UIColor colorWithRed:68.0f/255.0f green:68.0f/255.0f blue:68.0f/255.0f alpha:1.0f];
+            view.textColor = TUCalendar_GlobalTextColor;
         }
         
         view.text = [[self daysOfWeek] objectAtIndex:i];

@@ -66,11 +66,11 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTouch)];
         
     self.userInteractionEnabled = YES;
-    [self addGestureRecognizer:gesture];
     [self addSubview:backgroundView];
     [self addSubview:checkedView];
     [self addSubview:circleView];
     [self addSubview:textLabel];
+    [self addGestureRecognizer:gesture];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didDaySelected:) name:kTUCalendarDaySelected object:nil];
 }
@@ -92,14 +92,13 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     CGFloat sizeCircle = MIN(self.width, self.height);
     
     sizeCircle = roundf(sizeCircle) - 6.0f;
-    
     circleView.frame = CGRectMake(0, 0, sizeCircle, sizeCircle);
     circleView.center = CGPointMake(self.width / 2.0f, self.height / 2.0f);
     circleView.layer.cornerRadius = sizeCircle / 2.0f;
     
-    checkedView.frame = CGRectMake(0, 0, sizeCircle, sizeCircle);
+    checkedView.frame = CGRectMake(0, 0, sizeCircle - 1.0f, sizeCircle - 1.0f);
     checkedView.center = CGPointMake(self.width / 2.0f, self.height / 2.0f);
-    checkedView.layer.cornerRadius = sizeCircle / 2.0f;
+    checkedView.layer.cornerRadius = (sizeCircle - 1.0f) / 2.0f;
 }
 
 - (void)setDate:(NSDate *)date
@@ -134,7 +133,13 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kTUCalendarDaySelected object:self.date];
     
-    [self.calendar.dataSource calendarDidDateSelected:self.calendar date:self.date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSTimeZone *timeZone = [NSTimeZone localTimeZone];
+    
+    [formatter setTimeZone:timeZone];
+    [formatter setDateFormat : @"yyyy-M-d"];
+    
+    [self.calendar.dataSource calendarDidDateSelected:self.calendar date:[formatter stringFromDate:self.date]];
     
     if(!self.isOtherMonth){
         return;
@@ -179,28 +184,28 @@ static NSString *const kTUCalendarDaySelected = @"kTUCalendarDaySelected";
     CGAffineTransform tr = CGAffineTransformIdentity;
     CGFloat opacity = 1.0f;
     
-    if(selected){
-        circleView.color = GlobalPinkColor;
-        textLabel.textColor = GlobalTextSelectedColor;
-        checkedView.color = GlobalDefaultColor;
+    if([self isToday]){
+        circleView.color = TUCalendar_GlobalPinkColor;
+        textLabel.textColor = TUCalendar_GlobalTextSelectedColor;
+    }
+    else if(selected){
+        circleView.color = TUCalendar_GlobalGrayColor;
+        textLabel.textColor = TUCalendar_GlobalTextSelectedColor;
+        checkedView.color = TUCalendar_GlobalDefaultColor;
         
         circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1f, 0.1f);
         tr = CGAffineTransformIdentity;
     }
-    else if([self isToday]){
-        circleView.color = GlobalGrayColor;
-        textLabel.textColor = GlobalTextSelectedColor;
-    }
     else{
         if(isWeekend)
         {
-            textLabel.textColor = GlobalPinkColor;
+            textLabel.textColor = TUCalendar_GlobalPinkColor;
         }
         else
         {
-            textLabel.textColor = GlobalTextColor;
+            textLabel.textColor = TUCalendar_GlobalTextColor;
         }
-        checkedView.color = GlobalDefaultColor;
+        checkedView.color = TUCalendar_GlobalDefaultColor;
         if(!self.isOtherMonth){
             textLabel.alpha = 1.0f;
         }

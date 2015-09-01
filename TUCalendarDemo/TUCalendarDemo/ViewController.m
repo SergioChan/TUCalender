@@ -47,7 +47,7 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setTranslucent:YES];
-    [self.navigationController.navigationBar lt_setBackgroundColor:GlobalGrayColor];
+    [self.navigationController.navigationBar lt_setBackgroundColor:TUCalendar_GlobalGrayColor];
 }
 
 #pragma mark - TUCalendarDataSource

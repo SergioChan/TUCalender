@@ -47,7 +47,7 @@
     self->_color = color;
     if([color isEqual:[UIColor clearColor]])
     {
-        self.layer.borderColor = GlobalPinkColor.CGColor;
+        self.layer.borderColor = TUCalendar_GlobalPinkColor.CGColor;
         self.layer.borderWidth = 1.0f;
     }
     else

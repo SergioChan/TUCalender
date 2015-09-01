@@ -103,13 +103,13 @@
 
 - (void)reloadLayout
 {
-    yearLabel.textColor = GlobalTextColor;
+    yearLabel.textColor = TUCalendar_GlobalTextColor;
     yearLabel.font = [UIFont systemFontOfSize:12.0f];
     monthLabel.textColor = [UIColor blackColor];
     monthLabel.font = [UIFont boldSystemFontOfSize:22.0f];
     
-    [prevButton setBackgroundImage:[UIImage imageNamed:@"backward"] forState:UIControlStateNormal];
-    [nextButton setBackgroundImage:[UIImage imageNamed:@"forward"] forState:UIControlStateNormal];
+    [prevButton setImage:[UIImage imageNamed:@"Backward"] forState:UIControlStateNormal];
+    [nextButton setImage:[UIImage imageNamed:@"Forward"] forState:UIControlStateNormal];
 }
 
 @end
